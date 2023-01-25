@@ -1,39 +1,35 @@
 # Language
 
-_What is the name of the language? Link the name to its webpage
-(if appropriate)._
+[YAML](https://en.wikipedia.org/wiki/YAML) was originally an acronym for *Yet Another Markup Language*, but later changed its name to the (recursive) acronym *YAML Ain't Markup Language*.
 
 # Domain
 
-_Describe the language's domain in five words._
++ Wikipedia describes YAML as a `human-readable data-serialization language.`
++ Alternatively, *storing data, with markup features*.
 
 # Computational model
 
-_We don't yet have a great definition of the term "computational model".
-For now, try to come up with the clearest, most concise explanation of
-what happens when a program in your DSL runs._
+"Running" YAML code would involve parsing a .yaml file and using its data in either a program written in a general purpose language, or using the info to control how to present the data to the user.
 
 # DSL-ness
 
-_Fowler writes about a spectrum of languages, from general-purpose languages to
-"purely" domain-specific. Where does the DSL you chose fall on this spectrum,
-and why?_
+YAML is purely domain-specific. The language is not Turing complete, and only functions as a format for storing data, albiet in a human-readable way that can still handle a number of different data types.
 
 # Internal or external?
 
-_Is the language implemented as an internal or external DSL?
-Justify your answer._
+YAML is an external language- it isn't valid code of any general purpose programming language, and can actually be parsed into many different programming languages.
 
 # Host language
 
-_What language(s) was (were) used to implement the DSL?_
+YAML parsers exist for a number of different popular general programming languages, and it wasn't designed for a specific one.[^1]
+
+[^1]: Due to how YAML is designed, JSON files are inherently valid YAML syntax. JSON's original host language is Javascript. 
 
 # Benefits
 
-_Identify one potential benefit of the DSL: how is a programmer's life made
-easier by the existence of this language?_
+Because YAML primarily relies on whitespace and line breaks for structure, it is easily able to store many kinds of data without said data unintentionally containing a break charaacter that separates it into two parts. This also makes it easily human readable.
 
 # Drawbacks
 
-_Identify one potential drawback of the DSL: what does a programmer
-lose by using this DSL instead of a general-purpose language?_
+Because YAML primarily relies on whitespace and line breaks for structure, this makes it easy to accidentally commit harmful indentation errors.
+

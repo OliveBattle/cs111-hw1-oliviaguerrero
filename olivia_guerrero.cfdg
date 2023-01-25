@@ -1,0 +1,90 @@
+startshape CITY
+
+
+shape CITY
+{
+  SKY [size 100]
+  SPOTLIGHT [size 100 x -5 y 21 z 1 skew 30 0]
+  SPOTLIGHT [size 100 x -10 y 21 z 1 skew -40 0]
+  GROUND [size 100 y -30 z 2]
+}
+
+
+shape SKY
+{
+  SQUARE [hue 225 sat 0.7 b 0.2]
+}
+
+shape SPOTLIGHT
+{
+  TRIANGLE [ hue 55 sat 1 b 0.6
+  flip 0 size 0.2 1]
+}
+
+shape GROUND
+{
+  SQUARE [ b 0 size 1 0.4 ]
+  ROAD [ size 0.70 0.46 x 0.15 y -0.065 
+         skew 20 0 ]
+  BUILDING [ size 0.46 0.4 x -0.35 y 0.16]
+}
+
+shape ROAD 
+{
+  TRIANGLE [sat 0 b 0.3 ]
+  TRIANGLE [sat 0 b 0.1 size 0.8 1]
+  ROADDASH [hue 55 sat 0.9 b 0.25 y -0.2]
+}
+
+shape ROADDASH
+{
+  SQUARE [ size 0.03 0.10 skew 10 0 ]
+  ROADDASH [ size 0.65 x 0.001 y 0.25 ]
+}
+
+shape BUILDING
+{
+  PARALLELOGRAM [size 0.8 1 b 0.4 z 1]
+  SQUARE [size 0.4 2.40 x -0.6 y 0 b 0.2 ]
+  WINDOWS [ hue 55 sat 0.9 b 0.8 z 2]
+  BUILDING [size 0.45 x 0.765 y 0.06 ]
+}
+
+shape WINDOWS
+{
+  WINDOW [ x -0.25 y 0.8 skew 0 -30]
+  WINDOW [ x 0.02 y 0.67 skew 0 -30 size 0.9]
+  WINDOW [ x 0.25 y 0.55 skew 0 -30 size 0.78]
+  
+  WINDOW [ x -0.25 y 0.37 skew 0 -25 ]
+  WINDOW [ x 0.02 y 0.28  skew 0 -25 size 0.9]
+  WINDOW [ x 0.25 y 0.20 skew 0 -25 size 0.78]
+}
+
+shape WINDOWLINE 
+{
+  
+}
+
+shape WINDOW
+{
+  SQUARE [ size 0.15 0.25]
+  //PARALLELOGRAM [ skew 0 -10 size 0.2 ]
+}
+
+shape PARALLELOGRAM
+{
+  SQUARE [ skew 0 30 y -0.4]
+  SQUARE [ size 0.6 x -0.2 ]
+  SQUARE [ skew 0 -30 y 0.4]
+  
+}
+
+
+
+
+
+
+
+
+
